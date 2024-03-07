@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -24,11 +25,15 @@ import database.DBadapter;
 
 public class Activity_2_browser extends AppCompatActivity {
     public DBadapter dbAdapter;
+    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity2_browser);
+
+        dbAdapter = new DBadapter(this);
+        dbAdapter.open();
 
         // definisco i riferimenti a EditText, Button1, Button2, Button3 e Webview
         EditText editText = (EditText) findViewById(R.id.act2_et1);
@@ -83,7 +88,7 @@ public class Activity_2_browser extends AppCompatActivity {
             }
         });
 
-        // setto il bottone 2 per tornare alla pagina principale
+        // setto il bottone 3 per tornare alla pagina principale
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,19 +101,22 @@ public class Activity_2_browser extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DBadapter dBadapter = new DBadapter(Activity_2_browser.this);
-                dBadapter.open();
                 String url = editText.getText().toString();
                 String nome = getNomeSito(url);
                 dbAdapter.aggiungiSito(nome, url);
                 Toast.makeText(Activity_2_browser.this, "AGGIUNTO", Toast.LENGTH_SHORT).show();
-                dbAdapter.close();
-            }
+                }
         });
 
 
     }
 // ************************* fine OnCreate
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        dbAdapter.close();
+    }
 
 
     // *******  *****  ***  ***  **  - - - - - - - - - - - - - - - -  **  ***  ***  *****  *******

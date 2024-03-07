@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "mydb7.sql";
+    private static final String DATABASE_NAME = "mydb2.sql";
     private static final int DATABASE_VERSION = 1;
 
     //statement sql per la creazione della tabella

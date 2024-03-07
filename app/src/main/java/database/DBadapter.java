@@ -35,10 +35,10 @@ public class DBadapter {
 
     //questa era public DBadapter open() con return this;
     // ma funziona anche cin return void
-    public void open(){
+    public DBadapter open(){
         dbHelper = new DbHelper(ctx);
         database = dbHelper.getWritableDatabase();
-        return ;
+        return this;
     }
 
 
