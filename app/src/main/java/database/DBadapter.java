@@ -95,7 +95,7 @@ public class DBadapter {
         }
     }
 
-    // metodi per resituire le liste
+    // metodi per ressituire le liste
     public ArrayList<Integer> getListId (){
         return listId;
     }
