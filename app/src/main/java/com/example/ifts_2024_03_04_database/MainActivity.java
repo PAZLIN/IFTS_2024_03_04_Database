@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
         // istanzio il mio adapter e gli passo il context
         // il Context dell'Activity viene passato al dbadapter, il quale lo passa all'oggetto helper, il quale lo utilizza nel
-        // metodo getWritableDatabase() per ricavare il percorso dell'applicazione e creare il file nel percorso dell'apllicazione
+        // metodo getWritableDatabase() per ricavare il percorso dell'applicazione e creare il file nel percorso corretto
+        
         dbAdapter = new DBadapter(this);
 
         // chiamo il metodo open(), il quale non crea un database ma istanzia un oggetto di tipo SQLiteOpenHelper,
