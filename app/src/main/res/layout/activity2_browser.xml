@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity_2_browser">
+
+
+    <EditText
+        android:id="@+id/act2_et1"
+        android:layout_width="240dp"
+        android:hint="sito web"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:id="@+id/act2_btn1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Vai"
+        android:layout_toRightOf="@+id/act2_et1"/>
+    <Button
+        android:id="@+id/act2_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="❤"
+        android:layout_toRightOf="@+id/act2_btn1"/>
+
+    <Button
+        android:id="@+id/act2_btn3"
+        android:layout_marginTop="0dp"
+
+        android:layout_below="@id/act2_et1"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:text="PAGINA PRINCIPALE"
+        android:textSize="14dp"/>
+
+    <WebView
+        android:id="@+id/act2_wv1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/act2_btn3"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

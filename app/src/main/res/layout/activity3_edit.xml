@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_3_edit">
+    
+    <EditText
+        android:layout_marginTop="27dp"
+        android:id="@+id/act3_et1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:layout_marginTop="124dp"
+        android:id="@+id/act3_et2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="25dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/act3_btn1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+       android:layout_gravity="bottom"
+        android:layout_marginBottom="300dp"
+        android:text="Salva"
+        android:textScaleX="3"
+        android:textSize="40dp"/>
+
+
+
+
+</FrameLayout>
